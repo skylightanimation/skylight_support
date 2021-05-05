@@ -45,7 +45,7 @@
 		var oSegment = getUrlSegment(1);
 		var rModul = capitalizeFirstLetter(rSegment);
 		
-		if (oSegment == 'status' || oSegment == 'detail') {
+		if (oSegment == 'status' || oSegment == 'detail' || oSegment == 'category') {
 			var oModul = capitalizeFirstLetter(oSegment);			
 			if (access == 'title') {
 				Modul = rModul+' '+oModul;
@@ -161,3 +161,16 @@
 		}
 	}
 //---<> Access
+
+//---<> Get Id
+
+function getSelectPointer(str){
+	var pointer = str.substr(0, str.indexOf('_id_select_'));
+
+	console.log(pointer);
+
+	return pointer;
+
+}
+
+//---<> Get Id

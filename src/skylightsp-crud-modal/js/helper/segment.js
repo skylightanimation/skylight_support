@@ -20,11 +20,11 @@ function getUrlSegment(number){
 		var oSegment = getUrlSegment(1);
 		var sSegment = getUrlSegment(2);
 		var eSegment = getUrlSegment(3);
-		if ((rSegment == 'status' || oSegment == 'detail') && sSegment != '' && eSegment == '') {
+		if ((rSegment == 'status' || rSegment == 'category' || oSegment == 'detail') && sSegment != '' && eSegment == '') {
 			result = base_url+rSegment+'/'+oSegment+'/'+sSegment+'/'+eSegment;
 		}else if ((rSegment == 'status' || oSegment == 'detail') && sSegment != '') {
 			result = base_url+rSegment+'/'+oSegment+'/'+sSegment;
-		}else if (oSegment == 'status' || oSegment == 'detail') {
+		}else if (oSegment == 'status' || oSegment == 'detail' || oSegment == 'category') {
 			result = base_url+rSegment+'/'+oSegment;
 			// return result;
 		}else{
